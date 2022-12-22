@@ -1,0 +1,226 @@
+* {
+    font-family: "JetBrains Mono ExtraBold";
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #f8bbd0 10%, #ffffff 100%);
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b4b3b3
+}
+
+.title {
+    background-color: #f8bbd0;
+    text-align: center;
+    font-size: clamp(30px,5.6vw,50px);
+    font-weight: bold;
+    padding: 20px;
+    margin: 0;
+    text-justify: auto;
+}
+
+.wrapper {
+    margin: 5% auto;
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.wrapper header {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.wrapper .task-insert, .wrapper .list-insert {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.task-insert #task, .list-insert #list {
+    outline: none;
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.task-insert button, .list-insert button {
+    width: 60px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #ffecb3;
+    color: #888;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.task-insert button.active, .list-insert button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper #task_list, .wrapper #list_list {
+    padding: initial;
+    height: 100%;
+    max-height: 400px;
+    overflow: auto;
+}
+
+#task_list li, #list_list li {
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow .3s;
+    margin-right: 5px;
+}
+
+#task_list li span, #list_list li span {
+    position: absolute;
+    right: -45px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background: #e74c3c;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#task_list li .close, #list_list li .close {
+    position: absolute;
+    right: -45px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background: #e74c3c;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 100%;
+    padding-top: 10px;
+}
+
+
+.circleXImg
+{
+    width: 65%;
+    height: 80%;
+    margin-bottom: 22px;
+}
+
+
+.plusImg
+{
+    width: 65%;
+    height: 80%;
+}
+
+
+.penImg {
+    position: absolute;
+    right: 50px;
+    width: min(36px,30%);
+    margin-top: 5px;
+}
+.penImg:hover{
+    transform: translateY(-3px);
+}
+.listNewName
+{
+    height: 80%;
+}
+
+
+#task_list li:hover span, #list_list li:hover span {
+    right: 0;
+}
+
+.wrapper .footer {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.footer button {
+    border: none;
+    outline: none;
+    background: #ffecb3;
+    color: #888;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+ul li:nth-child(odd) {
+    background: #ffecb3;
+}
+
+ul li:nth-child(even) {
+    background: #ffffe5;
+}
+
+ul li:hover {
+    background: #e5d18d;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.even-task {
+    background: #ffecb3 radial-gradient(circle, rgba(255,236,179,1) 70%, rgba(255,255,255,1) 100%);
+}
+
+.odd-task {
+    background: #cbba83 radial-gradient(circle, rgba(203,186,131,1) 70%, rgba(255,255,255,1) 100%);
+}
+
+#task_list li.unchecked {
+
+}
+
+#task_list li.checked {
+    background: #76ec76;
+    color: black;
+    text-decoration: line-through;
+}
+#task_list li:hover.checked {
+    background: #66cc66;
+}

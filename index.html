@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Logo -->
+    <link rel="shortcut icon" type="image/x-icon" href="resources/minimalistLogo.png" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/styles.css">
+
+    <title>Minima List</title>
+</head>
+<body>
+    <!-- Title bar -->
+    <header>
+        <h1 class="title">M I N I M A - L I S T</h1>
+    </header>
+    <!-- Page body -->
+    <main class="container d-flex align-items-start">
+        <div class="wrapper">
+            <header>Lists</header>
+            <!-- Add list -->
+            <div class="list-insert">
+                <input type="text" id="list" placeholder="Add a list..." maxlength="45">
+                <button id="addListBtn" onclick="addNewList()">
+                    <img src="resources/icons/plus.png" alt="" class="plusImg">
+<!--                    <i class="fas fa-plus"></i>-->
+                </button>
+            </div>
+            <!-- Lists list -->
+            <ul id="list_list">
+                <!-- All lists on <li> from lists.js using addList() -->
+            </ul>
+<!--            <div class="footer">-->
+<!--                <span id="pending">Tens 0 llistes pendents</span>-->
+<!--                <button onclick="removeList()">Esborra tot</button>-->
+<!--            </div>-->
+        </div>
+        <div class="wrapper">
+            <header id="tasksTitle"></header>
+            <!-- Add task -->
+            <div class="task-insert">
+                <input type="text" id="task" placeholder="Add a task..." maxlength="45">
+                <button id="addBtn" onclick="addTask()">
+                    <img src="resources/icons/plus.png" alt="" class="plusImg">
+<!--                    <i class="fas fa-plus"></i>-->
+                </button>
+            </div>
+            <!-- Tasks list -->
+            <ul id="task_list">
+                <!-- All tasks on <li> from task.js using addTask() -->
+            </ul>
+            <!--
+            <div class="footer">
+                <span>Tens 4 tasques pendents</span>
+                <button>Esborra tot</button>
+            </div>
+            -->
+        </div>
+    </main>
+    <script type="text/javascript" src="script/apiConnection.js"></script>
+    <script type="text/javascript" src="script/tasks.js"></script>
+    <script type="text/javascript" src="script/lists.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</body>
+</html>
